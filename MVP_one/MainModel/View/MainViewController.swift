@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    // MARK: - IBOutlets
+// MARK: - IBOutlets
     
     @IBOutlet weak var greetingLabel: UILabel!
     
@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+// MARK: - IBAction
     
     @IBAction func buttonPressed(_ sender: Any) {
         presenter?.showGreeting()

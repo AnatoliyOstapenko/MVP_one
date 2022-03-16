@@ -18,6 +18,8 @@
 		BC9D75F727E247F3008554EC /* MVP_oneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D75F627E247F3008554EC /* MVP_oneUITestsLaunchTests.swift */; };
 		BC9D760427E248D9008554EC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760327E248D9008554EC /* Person.swift */; };
 		BC9D760627E2496C008554EC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760527E2496C008554EC /* MainPresenter.swift */; };
+		BC9D760C27E25CC7008554EC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9D760B27E25CC7008554EC /* MainViewController.xib */; };
+		BC9D760E27E25F29008554EC /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760D27E25F29008554EC /* ModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BC9D75F627E247F3008554EC /* MVP_oneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_oneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BC9D760327E248D9008554EC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BC9D760527E2496C008554EC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		BC9D760B27E25CC7008554EC /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		BC9D760D27E25F29008554EC /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +109,8 @@
 			children = (
 				BC9D75D327E247F0008554EC /* AppDelegate.swift */,
 				BC9D75D527E247F0008554EC /* SceneDelegate.swift */,
-				BC9D75D727E247F0008554EC /* MainViewController.swift */,
-				BC9D760527E2496C008554EC /* MainPresenter.swift */,
-				BC9D760327E248D9008554EC /* Person.swift */,
+				BC9D760D27E25F29008554EC /* ModuleBuilder.swift */,
+				BC9D760727E25AAD008554EC /* MainModel */,
 				BC9D75D927E247F0008554EC /* Main.storyboard */,
 				BC9D75DC27E247F3008554EC /* Assets.xcassets */,
 				BC9D75DE27E247F3008554EC /* LaunchScreen.storyboard */,
@@ -131,6 +134,41 @@
 				BC9D75F627E247F3008554EC /* MVP_oneUITestsLaunchTests.swift */,
 			);
 			path = MVP_oneUITests;
+			sourceTree = "<group>";
+		};
+		BC9D760727E25AAD008554EC /* MainModel */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D760927E25B10008554EC /* View */,
+				BC9D760827E25B01008554EC /* Presenter */,
+				BC9D760A27E25B1D008554EC /* Model */,
+			);
+			path = MainModel;
+			sourceTree = "<group>";
+		};
+		BC9D760827E25B01008554EC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D760527E2496C008554EC /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BC9D760927E25B10008554EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D75D727E247F0008554EC /* MainViewController.swift */,
+				BC9D760B27E25CC7008554EC /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC9D760A27E25B1D008554EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D760327E248D9008554EC /* Person.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +278,7 @@
 				BC9D75E027E247F3008554EC /* LaunchScreen.storyboard in Resources */,
 				BC9D75DD27E247F3008554EC /* Assets.xcassets in Resources */,
 				BC9D75DB27E247F0008554EC /* Main.storyboard in Resources */,
+				BC9D760C27E25CC7008554EC /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +308,7 @@
 				BC9D75D427E247F0008554EC /* AppDelegate.swift in Sources */,
 				BC9D760427E248D9008554EC /* Person.swift in Sources */,
 				BC9D75D627E247F0008554EC /* SceneDelegate.swift in Sources */,
+				BC9D760E27E25F29008554EC /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
