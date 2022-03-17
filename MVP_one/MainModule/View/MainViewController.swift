@@ -14,17 +14,12 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mvpTableView: UITableView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()        
         // Have to registrate a cell, there is no possibility to add cell in storyboard
         mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         mvpTableView.dataSource = self
         
     }
-
-    
-
-
 
 }
 // MARK: - Data Source
