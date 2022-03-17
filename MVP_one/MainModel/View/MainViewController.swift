@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
         mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         mvpTableView.dataSource = self
         
-        // Do any additional setup after loading the view.
     }
 
     
@@ -31,26 +30,25 @@ class MainViewController: UIViewController {
 // MARK: - Data Source
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        6
+        return presenter?.array.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "MVP pattern test \(indexPath.row)"
+        cell.textLabel?.text = presenter?.array[indexPath.row]?.text
         return cell
     }
-    
-    
 }
-
-
-
 
 // MARK: - Main View Protocol
 extension MainViewController: MainViewProtocol {
-    func setGreeting(greeting: String) {
-       
+    func succes() {
+        mvpTableView.reloadData()
+    }
+    
+    func failure(error: Error) {
+        print(error.localizedDescription)
     }
     
     

@@ -15,9 +15,9 @@ protocol Builder {
 // Class to use in SceneDelegate
 class BuilderModel: Builder {
     static func createMainModule() -> UIViewController {
-        let person = FakeAPI(firstName: "Winston", lastName: "Smith")
         let view = MainViewController()
-        let presenter = MainPresenter(view: view, person: person)
+        let networkService = NetworkService()
+        let presenter = MainPresenter(view: view, networkService: networkService)
         view.presenter = presenter
         return view
         
