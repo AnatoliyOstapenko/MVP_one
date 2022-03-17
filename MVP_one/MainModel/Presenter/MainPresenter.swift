@@ -10,28 +10,40 @@ import Foundation
 // set AnyObject word after protocol to make weak reference
 // MainViewProtocol is abstraction from Dependency Inversion (SOLID)
 protocol MainViewProtocol: AnyObject {
-    func setGreeting(greeting: String)
+    func succes()
+    func failure(error: Error)
 }
 
 protocol MainViewPresenterProtocol: AnyObject {
-    init(view: MainViewProtocol, person: FakeAPI)
-    func showGreeting()
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
+    func getData()
+    var array: [FakeAPI?] { get set }
 }
 
 class MainPresenter: MainViewPresenterProtocol {
-    let view: MainViewProtocol
-    let person: FakeAPI
     
-    required init(view: MainViewProtocol, person: FakeAPI) {
+    var array: [FakeAPI?] = []
+    weak var view: MainViewProtocol? // set weak reference to avoid of memory leak
+    let networkService: NetworkServiceProtocol
+    
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
-        self.person = person
+        self.networkService = networkService
     }
-    
-    func showGreeting() {
-        let greeting = self.person.firstName + " " + self.person.lastName
-        self.view.setGreeting(greeting: greeting)
+
+    func getData() {
+        networkService.getData { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let arrayFromNetwork):
+                    self?.array = arrayFromNetwork
+                    self?.view?.succes()
+                case .failure(let error):
+                    self?.view?.failure(error: error)
+                }
+            }
+            
+        }
     }
-    
-    
-    
+
 }
