@@ -14,15 +14,15 @@ protocol MainViewProtocol: AnyObject {
 }
 
 protocol MainViewPresenterProtocol: AnyObject {
-    init(view: MainViewProtocol, person: Person)
+    init(view: MainViewProtocol, person: FakeAPI)
     func showGreeting()
 }
 
 class MainPresenter: MainViewPresenterProtocol {
     let view: MainViewProtocol
-    let person: Person
+    let person: FakeAPI
     
-    required init(view: MainViewProtocol, person: Person) {
+    required init(view: MainViewProtocol, person: FakeAPI) {
         self.view = view
         self.person = person
     }

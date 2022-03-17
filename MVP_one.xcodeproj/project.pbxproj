@@ -16,11 +16,12 @@
 		BC9D75EB27E247F3008554EC /* MVP_oneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D75EA27E247F3008554EC /* MVP_oneTests.swift */; };
 		BC9D75F527E247F3008554EC /* MVP_oneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D75F427E247F3008554EC /* MVP_oneUITests.swift */; };
 		BC9D75F727E247F3008554EC /* MVP_oneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D75F627E247F3008554EC /* MVP_oneUITestsLaunchTests.swift */; };
-		BC9D760427E248D9008554EC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760327E248D9008554EC /* Person.swift */; };
+		BC9D760427E248D9008554EC /* FakeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760327E248D9008554EC /* FakeAPI.swift */; };
 		BC9D760627E2496C008554EC /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760527E2496C008554EC /* MainPresenter.swift */; };
 		BC9D760C27E25CC7008554EC /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC9D760B27E25CC7008554EC /* MainViewController.xib */; };
 		BC9D760E27E25F29008554EC /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D760D27E25F29008554EC /* ModuleBuilder.swift */; };
 		BC9D761327E26AD9008554EC /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D761227E26AD9008554EC /* MainPresenterTest.swift */; };
+		BC9D761527E33F81008554EC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D761427E33F81008554EC /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +55,12 @@
 		BC9D75F027E247F3008554EC /* MVP_oneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVP_oneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9D75F427E247F3008554EC /* MVP_oneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_oneUITests.swift; sourceTree = "<group>"; };
 		BC9D75F627E247F3008554EC /* MVP_oneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_oneUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BC9D760327E248D9008554EC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BC9D760327E248D9008554EC /* FakeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPI.swift; sourceTree = "<group>"; };
 		BC9D760527E2496C008554EC /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		BC9D760B27E25CC7008554EC /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		BC9D760D27E25F29008554EC /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		BC9D761227E26AD9008554EC /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		BC9D761427E33F81008554EC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				BC9D75D527E247F0008554EC /* SceneDelegate.swift */,
 				BC9D760D27E25F29008554EC /* ModuleBuilder.swift */,
 				BC9D760727E25AAD008554EC /* MainModel */,
+				BC9D761627E33F8D008554EC /* Services */,
 				BC9D75D927E247F0008554EC /* Main.storyboard */,
 				BC9D75DC27E247F3008554EC /* Assets.xcassets */,
 				BC9D75DE27E247F3008554EC /* LaunchScreen.storyboard */,
@@ -169,7 +172,7 @@
 		BC9D760A27E25B1D008554EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC9D760327E248D9008554EC /* Person.swift */,
+				BC9D760327E248D9008554EC /* FakeAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +183,14 @@
 				BC9D761227E26AD9008554EC /* MainPresenterTest.swift */,
 			);
 			path = TestMainModel;
+			sourceTree = "<group>";
+		};
+		BC9D761627E33F8D008554EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BC9D761427E33F81008554EC /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +328,10 @@
 				BC9D760627E2496C008554EC /* MainPresenter.swift in Sources */,
 				BC9D75D827E247F0008554EC /* MainViewController.swift in Sources */,
 				BC9D75D427E247F0008554EC /* AppDelegate.swift in Sources */,
-				BC9D760427E248D9008554EC /* Person.swift in Sources */,
+				BC9D760427E248D9008554EC /* FakeAPI.swift in Sources */,
 				BC9D75D627E247F0008554EC /* SceneDelegate.swift in Sources */,
 				BC9D760E27E25F29008554EC /* ModuleBuilder.swift in Sources */,
+				BC9D761527E33F81008554EC /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

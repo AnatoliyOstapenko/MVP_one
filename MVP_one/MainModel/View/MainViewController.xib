@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MVP_one" customModuleProvider="target">
             <connections>
-                <outlet property="greetingLabel" destination="KLK-W4-Mcf" id="ikt-en-ZWx"/>
+                <outlet property="mvpTableView" destination="MMs-W1-6i9" id="Bpb-IS-fQH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ARi-FM-L9w"/>
             </connections>
         </placeholder>
@@ -19,35 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="klp-Vf-Omc">
-                    <rect key="frame" x="107" y="368" width="200" height="160"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLK-W4-Mcf">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="80"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4Z-ze-PYZ">
-                            <rect key="frame" x="0.0" y="80" width="200" height="80"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            <connections>
-                                <action selector="buttonPressed:" destination="-1" eventType="touchUpInside" id="LSD-Ri-4fc"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="160" id="NrA-Y8-21X"/>
-                        <constraint firstAttribute="width" constant="200" id="T0z-6Y-plD"/>
-                    </constraints>
-                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MMs-W1-6i9">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="klp-Vf-Omc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Nub-Zq-uSb"/>
-                <constraint firstItem="klp-Vf-Omc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gW5-y7-tb0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MMs-W1-6i9" secondAttribute="trailing" id="4lr-tt-Si7"/>
+                <constraint firstItem="MMs-W1-6i9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PAO-IH-JaS"/>
+                <constraint firstItem="MMs-W1-6i9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TVj-nu-VMO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="MMs-W1-6i9" secondAttribute="bottom" id="WCE-nq-JUw"/>
             </constraints>
             <point key="canvasLocation" x="-403" y="111"/>
         </view>

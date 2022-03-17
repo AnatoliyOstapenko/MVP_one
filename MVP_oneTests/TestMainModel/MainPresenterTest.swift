@@ -22,14 +22,14 @@ class MainPresenterTest: XCTestCase {
     
     var view: MockView!
     var presenter: MainPresenter!
-    var person: Person!
+    var person: FakeAPI!
     
     
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         view = MockView()
-        person = Person(firstName: "Baz", lastName: "Bar")
+        person = FakeAPI(firstName: "Baz", lastName: "Bar")
         presenter = MainPresenter(view: view, person: person)
         
         
