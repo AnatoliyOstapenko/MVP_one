@@ -12,6 +12,7 @@ protocol Builder {
     static func createMainModule() -> UIViewController
 }
 
+// Class to use in SceneDelegate
 class BuilderModel: Builder {
     static func createMainModule() -> UIViewController {
         let person = Person(firstName: "Winston", lastName: "Smith")
