@@ -14,11 +14,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var mvpTableView: UITableView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         // Have to registrate a cell, there is no possibility to add cell in storyboard
         mvpTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         mvpTableView.dataSource = self
-        
+        mvpTableView.delegate = self
     }
 
 }
@@ -35,8 +35,16 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
 }
+// MARK: - Delegate
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let array = presenter?.array[indexPath.row]
+        let detailVC = ModuleBuilder.createDetailModule(item: array)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
 
-// MARK: - Main View Protocol
+// MARK: - MainViewProtocol
 extension MainViewController: MainViewProtocol {
     func succes() {
         mvpTableView.reloadData()

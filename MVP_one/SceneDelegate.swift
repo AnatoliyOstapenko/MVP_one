@@ -14,17 +14,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+  // MARK: - Block starts
         
         // Add this crap to work with xib
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let mainVC = BuilderModel.createMainModule()
+        let mainVC = ModuleBuilder.createMainModule()
         let navBar = UINavigationController(rootViewController: mainVC)
         window?.rootViewController = navBar
         window?.makeKeyAndVisible()
         
-        
+  // MARK: - Block ends
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

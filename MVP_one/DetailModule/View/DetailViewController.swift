@@ -15,11 +15,14 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        presenter?.setItem()
     }
-    
-    
 
+}
+// MARK: - DetailViewProtocol
 
+extension DetailViewController: DetailViewProtocol {
+    func setItem(data: FakeAPI?) {
+        detailLabel.text = data?.text
+    }
 }
